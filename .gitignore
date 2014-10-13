@@ -1,3 +1,19 @@
+# Project Output
+daemon_app
+daemon_controller
+
+# Editors
+*.vcproj*
+*.sw?
+
+# Build Systems
+Makefile
+
+# CMake Build System Generator
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
 # Compiled Object files
 *.slo
 *.lo
