@@ -1,5 +1,5 @@
-#ifndef DAEMON_CONTROLLER_H__
-#define DAEMON_CONTROLLER_H__
+#ifndef DAEMON_COMMON_H__
+#define DAEMON_COMMON_H__
 
 #include <string>
 
@@ -27,4 +27,4 @@ namespace daemons
 		}
 	}
 
-#endif //DAEMON_CONTROLLER_H__
+#endif //DAEMON_COMMON_H__

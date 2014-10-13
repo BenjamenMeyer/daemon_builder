@@ -12,7 +12,7 @@ SET(CONTROLLER_SOURCES daemon_controller.cpp)
 ADD_LIBRARY(daemon_common STATIC ${COMMON_SOURCES})
 
 ADD_EXECUTABLE(daemon_app ${APP_SOURCES})
-ADD_DEPENDENCIES(daemon_app daemon_common)
+TARGET_LINK_LIBRARIES(daemon_app daemon_common)
 
 ADD_EXECUTABLE(daemon_controller ${CONTROLLER_SOURCES})
-ADD_DEPENDENCIES(daemon_controller daemon_common)
+TARGET_LINK_LIBRARIES(daemon_controller daemon_common)
