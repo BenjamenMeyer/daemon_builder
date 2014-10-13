@@ -3,6 +3,8 @@ PROJECT(daemon C CXX)
 
 INCLUDE_DIRECTORIES(../include)
 
+LIST( APPEND CMAKE_CXX_FLAGS "-std=c++11")
+
 SET(COMMON_SOURCES daemon_common.cpp)
 
 SET(APP_SOURCES daemon_app.cpp)
