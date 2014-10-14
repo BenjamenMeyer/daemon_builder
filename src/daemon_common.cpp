@@ -229,11 +229,15 @@ uint8_t DaemonComms::receive_message(int _fd, size_t& _length, unsigned char*& _
 					if (incoming_data == header.length)
 						{
 						// send the data back up
-						unsigned char* return_buffer = (unsigned char*) calloc(sizeof(unsigned char), msg_length);
+						size_t data_msg_length = header.data_length + 1;
+						unsigned char* return_buffer = (unsigned char*) calloc(sizeof(unsigned char), data_msg_length);
 						if (return_buffer != NULL)
 							{
+							// calculate the start of the message section
+							unsigned char* data_ptr = recvd_data + (header_size + 1);
+
 							// copy it all, including the extra termination byte we added on the end
-							memcpy(return_buffer, recvd_data, msg_length);
+							memcpy(return_buffer, data_ptr, data_msg_length);
 
 							// give it to the caller, and only report the actual message size
 							_bytes = recvd_data;
