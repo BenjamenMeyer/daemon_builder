@@ -11,7 +11,7 @@
 using namespace daemons::common;
 
 // TODO: Make this a configuration option
-/* static */ std::string DaemonComms::commChannelAddressPath = "/run/daemon.comm";
+/* static */ std::string DaemonComms::commChannelAddressPath = "daemon.comm";
 
 static void controller_handler(DaemonComms& _comm, int _connection_socket)
 	{

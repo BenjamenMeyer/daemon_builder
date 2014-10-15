@@ -3,9 +3,13 @@ PROJECT(daemon C CXX)
 
 INCLUDE_DIRECTORIES(../include)
 
-LIST( APPEND CMAKE_CXX_FLAGS "-std=c++11")
+FIND_PACKAGE(Threads)
 
-SET(COMMON_SOURCES daemon_common.cpp)
+LIST( APPEND CMAKE_CXX_FLAGS "-std=c++11")
+# LIST( APPEND CMAKE_CXX_FLAGS "-Wall")
+# LIST( APPEND CMAKE_CXX_FLAGS "-ggdb")
+
+SET(COMMON_SOURCES daemon_common.cpp cmdparser.cpp)
 
 SET(APP_SOURCES daemon_app.cpp)
 
@@ -15,6 +19,8 @@ ADD_LIBRARY(daemon_common STATIC ${COMMON_SOURCES})
 
 ADD_EXECUTABLE(daemon_app ${APP_SOURCES})
 TARGET_LINK_LIBRARIES(daemon_app daemon_common)
+TARGET_LINK_LIBRARIES(daemon_app ${CMAKE_THREAD_LIBS_INIT})
 
 ADD_EXECUTABLE(daemon_controller ${CONTROLLER_SOURCES})
 TARGET_LINK_LIBRARIES(daemon_controller daemon_common)
+TARGET_LINK_LIBRARIES(daemon_controller ${CMAKE_THREAD_LIBS_INIT})
