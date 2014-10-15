@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-using namespace daemon::application;
+using namespace daemons::application;
 
 daemonApp::daemonApp(int argc, char* argv[]) : commChannel(false), arg_parser(argc, argv)
 	{

@@ -1,7 +1,7 @@
 #ifndef DAEMON_CONTROLLER_H__
 #define DAEMON_CONTROLLER_H__
 
-#include <daemon_common.h>
+#include <daemon_comm.h>
 #include <cmdparser.h>
 
 namespace daemons

@@ -1,4 +1,4 @@
-#include <daemon_common.h>
+#include <daemon_comm.h>
 
 #include <sys/socket.h>
 #include <sys/un.h>

@@ -1,10 +1,10 @@
 #ifndef DAEMON_APP_H__
 #define DAEMON_APP_H__
 
-#include <daemon_common.h>
+#include <daemon_comm.h>
 #include <cmdparser.h>
 
-namespace daemon
+namespace daemons
 	{
 	namespace application
 		{

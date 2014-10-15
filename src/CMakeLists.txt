@@ -6,10 +6,8 @@ INCLUDE_DIRECTORIES(../include)
 FIND_PACKAGE(Threads)
 
 LIST( APPEND CMAKE_CXX_FLAGS "-std=c++11")
-# LIST( APPEND CMAKE_CXX_FLAGS "-Wall")
-# LIST( APPEND CMAKE_CXX_FLAGS "-ggdb")
 
-SET(COMMON_SOURCES daemon_common.cpp cmdparser.cpp)
+SET(COMMON_SOURCES daemon_comm.cpp cmdparser.cpp)
 
 SET(APP_SOURCES daemon_app.cpp)
 
