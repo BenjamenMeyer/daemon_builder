@@ -1,5 +1,5 @@
-#ifndef DAEMON_COMMON_H__
-#define DAEMON_COMMON_H__
+#ifndef DAEMON_COMM_H__
+#define DAEMON_COMM_H__
 
 #include <string>
 #include <deque>
@@ -96,4 +96,4 @@ namespace daemons
 		}
 	}
 
-#endif //DAEMON_COMMON_H__
+#endif //DAEMON_COMM_H__
